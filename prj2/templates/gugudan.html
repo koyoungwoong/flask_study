@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Flask #2
+    </title>
+</head>
+<body>
+    <form method="POST" action="/calculate">
+        <h1> GUGUDAN </h1>
+        <h5> Enter your number</h5>
+        <input type="text" name="num">
+        <button type="submit">submit</button>
+    </form>
+    <div>
+        <p>
+            {% if num == None %}
+                <h5> Number is empty </h5>
+            {% else %}
+                {% for i in range(1,10) %}
+                    <p>{{num}} x {{i}} = {{num*i}}</br></p>
+                {% endfor %}
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
